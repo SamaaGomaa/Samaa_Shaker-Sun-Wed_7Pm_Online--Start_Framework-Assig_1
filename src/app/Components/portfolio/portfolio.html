@@ -1,0 +1,30 @@
+<div class="container py-5 mt-5 text-center">
+  <h2 class="fw-bold fs-40 text-navy pt-5 text-uppercase">
+    Portfolio Component
+  </h2>
+  <div class="text-navy">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="row g-5">
+    <div class="col-12 col-sm-6 col-md-4" *ngFor="let item of items">
+      <div class="portfolio-card" (click)="openImage(item)">
+        <img [src]="item.imageUrl" [alt]="item.alt" class="img-fluid" />
+        <div class="overlay">
+          <i class="fa-solid fa-plus fa-2x text-white fs-100 fw-bold"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="opend-img d-flex justify-content-center align-items-center"
+    *ngIf="selectedImage"
+    (click)="closeImage()"
+  >
+    <img
+      [src]="selectedImage.imageUrl"
+      [alt]="selectedImage.alt"
+      class="img-fluid shadow-lg rounded"
+    />
+  </div>
+</div>

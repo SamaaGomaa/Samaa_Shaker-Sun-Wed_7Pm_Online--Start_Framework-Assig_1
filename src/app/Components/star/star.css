@@ -1,0 +1,19 @@
+.custom-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  color: currentColor;
+}
+
+.custom-divider i {
+  margin: 0 15px;
+}
+
+.custom-divider::before,
+.custom-divider::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: currentColor;
+}
