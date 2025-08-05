@@ -1,5 +1,3 @@
-///NOTE::: I made research and used some help here - i did not reach this point - in portfolio - alone /////
-
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
